@@ -21,7 +21,7 @@ export const PricingSection = () => {
           <div className="relative p-8 rounded-2xl backdrop-blur-sm border-2 bg-gradient-to-b from-white/10 to-white/5 border-cyan-500/50 shadow-cyan-500/25 transform hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
             <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
               <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                One Price
+                Simple Pricing
               </div>
             </div>
 
