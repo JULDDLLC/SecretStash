@@ -32,7 +32,7 @@ export const PricingSection = () => {
               <h3 className="text-2xl font-bold text-white mb-2">Pro</h3>
               <p className="text-muted-foreground mb-4">For serious developers and teams</p>
               <div className="flex items-baseline justify-center mb-2">
-                <span className="text-4xl font-bold text-white">$4.99</span>
+                <span className="text-4xl font-bold text-white">$4.97</span>
                 <span className="text-muted-foreground ml-2">/month</span>
               </div>
             </div>
