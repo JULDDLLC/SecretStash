@@ -57,7 +57,7 @@ export const PricingCard = ({ product, isPopular = false }: PricingCardProps) =>
       {isPopular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-            Most Popular
+            Exclusive Beta Price 
           </div>
         </div>
       )}
