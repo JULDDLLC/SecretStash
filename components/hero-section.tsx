@@ -42,7 +42,7 @@ export const HeroSection = () => {
               className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-400 hover:to-purple-400 text-white px-8 py-6 text-lg font-semibold shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105"
               asChild
             >
-              <Link href="/dashboard">
+              <Link href="/auth">
                 <Lock className="h-5 w-5 mr-2" />
                 Start Securing Now
               </Link>
@@ -53,9 +53,9 @@ export const HeroSection = () => {
               className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-6 text-lg font-semibold backdrop-blur-sm transition-all duration-300"
               asChild
             >
-              <Link href="/dashboard">
+              <Link href="/pricing">
               <Zap className="h-5 w-5 mr-2" />
-              View Demo
+              View Pricing
               </Link>
             </Button>
           </div>
