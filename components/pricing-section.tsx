@@ -70,7 +70,7 @@ export const PricingSection = () => {
 
         <div className="text-center mt-12">
           <p className="text-gray-400">
-            14-day free trial included. No credit card required to start.
+            7-day free trial included. No credit card required to start.
           </p>
         </div>
       </div>
