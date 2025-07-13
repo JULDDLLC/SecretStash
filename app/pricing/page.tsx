@@ -24,7 +24,7 @@ export default function PricingPage() {
                 Simple, Transparent Pricing
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                One powerful plan that grows with you. Upgrade or downgrade at any time.
+                One powerful plan that grows with you. Free 7 Day Trial - (No Credit Card Required for trial)
               </p>
             </div>
 
