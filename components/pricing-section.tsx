@@ -9,10 +9,10 @@ export const PricingSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
-            Simple, Transparent Pricing
+            Join the SecretStash Multiverse
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            One powerful plan that grows with you. Upgrade or downgrade at any time.
+            Privacy-first digital organization for developers, engineers, and power users.
           </p>
         </div>
 

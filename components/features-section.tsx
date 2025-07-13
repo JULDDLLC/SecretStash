@@ -7,49 +7,49 @@ export const FeaturesSection = () => {
     {
       icon: Key,
       title: "Secure Vault",
-      description: "Store API keys, passwords, certificates, and tokens with bank-level encryption.",
+      description: "Store API keys, passwords, certificates, and tokens with 100% local storage security.",
       gradient: "from-cyan-500 to-blue-500"
     },
     {
       icon: FileText,
       title: "Finance Matrix",
-      description: "Track income streams, expense flows, and subscriptions in one unified dashboard.",
+      description: "Track income streams, expense flows, and net worth in one unified cosmic dashboard.",
       gradient: "from-purple-500 to-pink-500"
     },
     {
-      icon: Search,
-      title: "Smart Organization",
-      description: "Find anything instantly with powerful search, filtering, and intelligent categorization.",
+      icon: Code,
+      title: "Universal Snippets",
+      description: "Manage code snippets, templates, and AI prompts with intelligent organization.",
       gradient: "from-green-500 to-emerald-500"
     },
     {
       icon: Shield,
       title: "Privacy First",
-      description: "100% local storage - your data never leaves your device. No servers, no tracking.",
+      description: "Privacy-first design - your data never leaves your device. No servers, no tracking.",
       gradient: "from-orange-500 to-red-500"
     },
     {
-      icon: Zap,
-      title: "Panic Button",
-      description: "Instantly hide all sensitive data with one click for emergency situations.",
+      icon: Palette,
+      title: "Cosmic Interface",
+      description: "Playful, customizable cosmic interface with themes, avatars, and smooth animations.",
       gradient: "from-yellow-500 to-orange-500"
+    },
+    {
+      icon: Search,
+      title: "Smart Search",
+      description: "Find anything instantly with powerful search, filtering, and intelligent categorization.",
+      gradient: "from-indigo-500 to-purple-500"
+    },
+    {
+      icon: Zap,
+      title: "Lightning Fast",
+      description: "Instant loading, smooth performance, and responsive design across all devices.",
+      gradient: "from-teal-500 to-cyan-500"
     },
     {
       icon: Download,
       title: "Export & Backup",
-      description: "Export your data to PDF or CSV for secure backups and reporting.",
-      gradient: "from-indigo-500 to-purple-500"
-    },
-    {
-      icon: Cloud,
-      title: "Health Insights",
-      description: "Get intelligent insights about your finances and security posture.",
-      gradient: "from-teal-500 to-cyan-500"
-    },
-    {
-      icon: Users,
-      title: "Customizable",
-      description: "Personalize themes, avatars, and workspace to match your style.",
+      description: "Export your data to PDF or CSV for secure backups and comprehensive reporting.",
       gradient: "from-rose-500 to-pink-500"
     }
   ];

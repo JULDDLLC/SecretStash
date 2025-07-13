@@ -36,16 +36,16 @@ export const PricingCard = ({ product, isPopular = false }: PricingCardProps) =>
   };
 
   const features = [
-    "Unlimited secrets",
-    "Finance Matrix module",
-    "Smart health insights",
-    "Panic button security",
-    "Custom themes & avatars",
-    "Advanced search & filters",
-    "Code snippets & AI prompts",
-    "Priority support",
-    "Export to PDF/CSV",
-    "Backup & restore"
+    "🔐 Secure secrets vault",
+    "💰 Finance matrix tracking",
+    "📝 Code snippets & AI prompts",
+    "🎨 Customizable cosmic interface",
+    "🔍 Advanced search & filters",
+    "📊 Smart health insights",
+    "🚨 Panic button security",
+    "📄 Export to PDF/CSV",
+    "☁️ 100% local storage",
+    "🎯 Privacy-first design"
   ];
 
   return (

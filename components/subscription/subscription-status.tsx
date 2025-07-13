@@ -44,8 +44,8 @@ export const SubscriptionStatus = () => {
     return (
       <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4">
         <div className="flex items-center space-x-2">
-          <AlertCircle className="h-4 w-4 text-yellow-400" />
-          <span className="text-sm text-gray-300">No active subscription</span>
+          <AlertCircle className="h-4 w-4 text-gray-400" />
+          <span className="text-sm text-gray-400">Free Trial</span>
         </div>
       </div>
     );

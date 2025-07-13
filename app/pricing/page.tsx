@@ -21,10 +21,11 @@ export default function PricingPage() {
                 <Calculator className="h-8 w-8 text-white" />
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
-                Simple, Transparent Pricing
+                Join the SecretStash Multiverse
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                One powerful plan that grows with you. 7 Day Free Trial (No Credit Card Required for trial)
+                Privacy-first digital organization for developers, engineers, and power users. 
+                Start your cosmic journey today.
               </p>
             </div>
 
@@ -40,7 +41,7 @@ export default function PricingPage() {
 
             <div className="text-center mt-12">
               <p className="text-gray-400">
-                7-day free trial included. No credit card required to start.
+                Secure checkout powered by Stripe. Cancel anytime.
               </p>
             </div>
           </div>

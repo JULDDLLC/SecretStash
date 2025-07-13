@@ -11,10 +11,10 @@ export interface Product {
 
 export const products: Product[] = [
   {
-    id: 'prod_Sfm9eRwW55D5Bu',
-    priceId: 'price_1RkQbHPjcHpgF26ukr162HTm',
-    name: 'Secret Stash Multivers',
-    description: 'SecretStash Multiverse is a privacy-first, all-in-one digital organization tool for developers, engineers, and power users. It combines a secure secrets vault, a finance matrix, and a universal snippet/code manager-all with a playful, customizable cosmic interface.',
+    id: 'prod_SfmrPuaDgmk6qT',
+    priceId: 'price_1RkRI3Bsr66TjEhQOafqQSbH',
+    name: 'Secret Stash',
+    description: 'SecretStash Multiverse is a privacy-first, all-in-one digital organization tool for developers, engineers, and power users. It combines a secure secrets vault, a finance matrix, and a universal snippet/code manager—all with a playful, customizable cosmic interface.',
     mode: 'subscription',
     price: 4.97,
     currency: 'USD',

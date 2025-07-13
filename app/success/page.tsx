@@ -69,14 +69,14 @@ export default function SuccessPage() {
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
                   {[
-                    'Unlimited secret storage',
+                    'Secure secrets vault',
                     'Finance Matrix module',
-                    'Code snippets & AI prompts',
+                    'Universal snippets manager',
+                    'Customizable cosmic interface',
                     'Advanced search & filters',
-                    'Custom themes & avatars',
-                    'Export to PDF/CSV',
                     'Panic button security',
-                    'Priority support'
+                    'Export to PDF/CSV',
+                    '100% local storage'
                   ].map((feature, index) => (
                     <div key={index} className="flex items-center space-x-3">
                       <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />

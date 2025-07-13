@@ -32,8 +32,9 @@ export const HeroSection = () => {
           </h1>
 
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-            The ultimate vault for developers and professionals to securely store secrets, track finances, 
-            and manage subscriptions. Your complete digital life organizer with bank-level security.
+            SecretStash Multiverse is a privacy-first, all-in-one digital organization tool for developers, 
+            engineers, and power users. Secure secrets vault, finance matrix, and universal snippet manager 
+            with a playful, customizable cosmic interface.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
