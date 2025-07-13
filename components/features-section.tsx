@@ -1,6 +1,6 @@
 'use client';
 
-import { Key, FileText, Search, Download, Shield, Zap, Users, Cloud } from 'lucide-react';
+import { Key, FileText, Search, Download, Shield, Zap, Users, Cloud, Code, Palette } from 'lucide-react';
 
 export const FeaturesSection = () => {
   const features = [
