@@ -29,7 +29,7 @@ export default function Home() {
         
         <div className="cosmic-content">
         <Navbar />
-        <main>
+        <main className="pt-20">
           <HeroSection />
           <FeaturesSection />
           <PricingSection />

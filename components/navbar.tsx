@@ -10,10 +10,10 @@ export const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
   const pathname = usePathname();
 
-  const isAuthenticated = pathname === '/dashboard' || pathname === '/finance';
+  const isAuthenticated = pathname === '/dashboard' || pathname === '/finance' || pathname === '/snippets' || pathname === '/settings';
 
   return (
-    <nav className="sticky top-0 z-50 backdrop-blur-md bg-black/10 border-b border-white/10">
+    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/20 border-b border-white/10 shadow-lg">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2 group">
           <div className="p-2 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 group-hover:from-cyan-400 group-hover:to-purple-400 transition-all duration-300">

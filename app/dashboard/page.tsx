@@ -133,7 +133,7 @@ export default function DashboardPage() {
         <div className="relative z-10">
         <Navbar />
         
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto px-4 py-8 pt-24">
           {/* Demo Data Disclaimer */}
           <div className="mb-6 p-4 bg-yellow-500/10 border border-yellow-500/20 rounded-lg">
             <div className="flex items-center space-x-2">

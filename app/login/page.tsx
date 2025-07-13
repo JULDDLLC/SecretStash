@@ -36,7 +36,7 @@ export default function LoginPage() {
         <div className="relative z-10">
         <Navbar />
         
-        <div className="flex items-center justify-center min-h-[calc(100vh-80px)] px-4">
+        <div className="flex items-center justify-center min-h-[calc(100vh-80px)] px-4 pt-20">
           <div className="w-full max-w-md">
             <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 shadow-2xl">
               <div className="text-center mb-8">

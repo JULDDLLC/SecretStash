@@ -15,7 +15,7 @@ export default function TermsPage() {
         <div className="relative z-10">
           <Navbar />
           
-          <div className="container mx-auto px-4 py-12 max-w-4xl">
+          <div className="container mx-auto px-4 py-12 pt-24 max-w-4xl">
             <div className="text-center mb-12">
               <div className="inline-flex p-3 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-6">
                 <Scale className="h-8 w-8 text-white" />

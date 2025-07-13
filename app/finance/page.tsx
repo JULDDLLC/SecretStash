@@ -237,7 +237,7 @@ export default function FinancePage() {
         <div className="relative z-10">
           <Navbar />
           
-          <div className="container mx-auto px-4 py-8">
+          <div className="container mx-auto px-4 py-8 pt-24">
             {/* Header */}
             <div className="text-center mb-8">
               <div className="inline-flex p-3 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-4">
