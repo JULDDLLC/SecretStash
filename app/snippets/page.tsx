@@ -4,11 +4,16 @@ import { useState, useEffect } from 'react';
 import { Plus, Download, Code, FileText, Heart, Zap } from 'lucide-react';
 import { Button } from '../../components/ui/button';
 import { Navbar } from '../../components/navbar';
+<<<<<<< HEAD
 import { ThemeProvider } from '../../contexts/theme-context'; // ✅ Corrected here
+=======
+import { ThemeProvider } from '../../contexts/theme-context';
+>>>>>>> 3f405ad5be1c4f87915b3a52b7aba4e9289950ff
 import { SnippetCard } from '../../components/snippet-card';
 import { AddSnippetModal } from '../../components/add-snippet-modal';
 import { SnippetSearchBar } from '../../components/snippet-search-bar';
 import { Snippet } from '../../types/snippet';
+<<<<<<< HEAD
 import {
   getSnippets,
   addSnippet,
@@ -16,6 +21,9 @@ import {
   deleteSnippet,
   toggleSnippetFavorite
 } from '../../lib/snippet-storage';
+=======
+import { getSnippets, addSnippet, updateSnippet, deleteSnippet, toggleSnippetFavorite } from '../../lib/snippet-storage';
+>>>>>>> 3f405ad5be1c4f87915b3a52b7aba4e9289950ff
 
 export default function SnippetsPage() {
   const [snippets, setSnippets] = useState<Snippet[]>([]);
@@ -61,7 +69,11 @@ export default function SnippetsPage() {
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString()
     };
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 3f405ad5be1c4f87915b3a52b7aba4e9289950ff
     addSnippet(newSnippet);
     setSnippets(prev => [...prev, newSnippet]);
   };
@@ -78,7 +90,11 @@ export default function SnippetsPage() {
         ...snippetData,
         updatedAt: new Date().toISOString()
       };
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> 3f405ad5be1c4f87915b3a52b7aba4e9289950ff
       updateSnippet(editingSnippet.id, updatedSnippet);
       setSnippets(prev => prev.map(s => s.id === editingSnippet.id ? updatedSnippet : s));
       setEditingSnippet(undefined);
@@ -92,7 +108,11 @@ export default function SnippetsPage() {
 
   const handleToggleFavorite = (id: string) => {
     toggleSnippetFavorite(id);
+<<<<<<< HEAD
     setSnippets(prev => prev.map(s =>
+=======
+    setSnippets(prev => prev.map(s => 
+>>>>>>> 3f405ad5be1c4f87915b3a52b7aba4e9289950ff
       s.id === id ? { ...s, isFavorite: !s.isFavorite, updatedAt: new Date().toISOString() } : s
     ));
   };
@@ -110,11 +130,28 @@ export default function SnippetsPage() {
     URL.revokeObjectURL(url);
   };
 
+<<<<<<< HEAD
   const languageStats = snippets.reduce((acc, snippet) => {
     acc[snippet.language] = (acc[snippet.language] || 0) + 1;
     return acc;
   }, {} as Record<string, number>);
 
+=======
+  const getLanguageStats = () => {
+    const stats = snippets.reduce((acc, snippet) => {
+      acc[snippet.language] = (acc[snippet.language] || 0) + 1;
+      return acc;
+    }, {} as Record<string, number>);
+    
+    return Object.entries(stats).map(([language, count]) => ({
+      language,
+      count,
+      name: language.charAt(0).toUpperCase() + language.slice(1)
+    }));
+  };
+
+  const languageStats = getLanguageStats();
+>>>>>>> 3f405ad5be1c4f87915b3a52b7aba4e9289950ff
   const favoriteCount = snippets.filter(s => s.isFavorite).length;
 
   return (
@@ -124,21 +161,37 @@ export default function SnippetsPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-white to-gray-50 light:opacity-100 opacity-0 transition-opacity duration-300" />
         <div className="relative z-10">
           <Navbar />
+<<<<<<< HEAD
 
           <div className="container mx-auto px-4 py-8 pt-24">
+=======
+          
+          <div className="container mx-auto px-4 py-8 pt-24">
+            {/* Demo Data Disclaimer */}
+>>>>>>> 3f405ad5be1c4f87915b3a52b7aba4e9289950ff
             <div className="mb-6 p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">
               <div className="flex items-center space-x-2">
                 <Code className="h-5 w-5 text-blue-400" />
                 <p className="text-blue-200 text-sm">
+<<<<<<< HEAD
                   <strong>Demo Notice:</strong> The snippets below are demo content. Replace them with your own!
+=======
+                  <strong>Demo Notice:</strong> The snippets displayed below are sample code and prompts for demonstration purposes. 
+                  Replace these with your own code snippets, templates, and AI prompts for maximum productivity.
+>>>>>>> 3f405ad5be1c4f87915b3a52b7aba4e9289950ff
                 </p>
               </div>
             </div>
 
+<<<<<<< HEAD
+=======
+            {/* Header */}
+>>>>>>> 3f405ad5be1c4f87915b3a52b7aba4e9289950ff
             <div className="mb-8">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6">
                 <div>
                   <h1 className="text-3xl font-bold text-foreground mb-2">Code Snippets & Prompts</h1>
+<<<<<<< HEAD
                   <p className="text-muted-foreground">Organize your reusable code, prompts, and templates.</p>
                 </div>
                 <div className="flex items-center space-x-4 mt-4 sm:mt-0">
@@ -147,10 +200,30 @@ export default function SnippetsPage() {
                   </Button>
                   <Button onClick={() => setIsAddModalOpen(true)} className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white">
                     <Plus className="h-4 w-4 mr-2" /> Add Snippet
+=======
+                  <p className="text-muted-foreground">Store and organize your code snippets, templates, and AI prompts</p>
+                </div>
+                <div className="flex items-center space-x-4 mt-4 sm:mt-0">
+                  <Button
+                    onClick={handleExportSnippets}
+                    variant="outline"
+                    className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10"
+                  >
+                    <Download className="h-4 w-4 mr-2" />
+                    Export JSON
+                  </Button>
+                  <Button
+                    onClick={() => setIsAddModalOpen(true)}
+                    className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-400 hover:to-purple-400 text-white"
+                  >
+                    <Plus className="h-4 w-4 mr-2" />
+                    Add Snippet
+>>>>>>> 3f405ad5be1c4f87915b3a52b7aba4e9289950ff
                   </Button>
                 </div>
               </div>
 
+<<<<<<< HEAD
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
                 <StatCard label="Total Snippets" value={snippets.length} icon={<Code className="h-8 w-8 text-cyan-400" />} />
                 <StatCard label="Languages" value={Object.keys(languageStats).length} icon={<FileText className="h-8 w-8 text-purple-400" />} />
@@ -159,6 +232,52 @@ export default function SnippetsPage() {
               </div>
             </div>
 
+=======
+              {/* Stats Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-muted-foreground text-sm">Total Snippets</p>
+                      <p className="text-2xl font-bold text-foreground">{snippets.length}</p>
+                    </div>
+                    <Code className="h-8 w-8 text-cyan-400" />
+                  </div>
+                </div>
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-muted-foreground text-sm">Languages</p>
+                      <p className="text-2xl font-bold text-foreground">{languageStats.length}</p>
+                    </div>
+                    <FileText className="h-8 w-8 text-purple-400" />
+                  </div>
+                </div>
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-muted-foreground text-sm">Favorites</p>
+                      <p className="text-2xl font-bold text-foreground">{favoriteCount}</p>
+                    </div>
+                    <Heart className="h-8 w-8 text-red-400" />
+                  </div>
+                </div>
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-muted-foreground text-sm">AI Prompts</p>
+                      <p className="text-2xl font-bold text-foreground">
+                        {snippets.filter(s => s.language === 'prompt').length}
+                      </p>
+                    </div>
+                    <Zap className="h-8 w-8 text-yellow-400" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Search and Filter */}
+>>>>>>> 3f405ad5be1c4f87915b3a52b7aba4e9289950ff
             <SnippetSearchBar
               searchTerm={searchTerm}
               onSearchChange={setSearchTerm}
@@ -168,8 +287,14 @@ export default function SnippetsPage() {
               onToggleFavorites={() => setShowFavoritesOnly(!showFavoritesOnly)}
             />
 
+<<<<<<< HEAD
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
               {filteredSnippets.map(snippet => (
+=======
+            {/* Snippets Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+              {filteredSnippets.map((snippet) => (
+>>>>>>> 3f405ad5be1c4f87915b3a52b7aba4e9289950ff
                 <SnippetCard
                   key={snippet.id}
                   snippet={snippet}
@@ -183,6 +308,7 @@ export default function SnippetsPage() {
             {filteredSnippets.length === 0 && (
               <div className="text-center py-12">
                 <Code className="h-16 w-16 text-gray-500 mx-auto mb-4" />
+<<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-muted-foreground mb-2">No snippets found</h3>
                 <p className="text-muted-foreground mb-6">
                   Adjust your filters or add your first snippet to get started.
@@ -190,10 +316,33 @@ export default function SnippetsPage() {
                 <Button onClick={() => setIsAddModalOpen(true)} className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white">
                   <Plus className="h-4 w-4 mr-2" /> Add Your First Snippet
                 </Button>
+=======
+                <h3 className="text-xl font-semibold text-muted-foreground mb-2">
+                  {searchTerm || languageFilter !== 'all' || showFavoritesOnly ? 'No snippets found' : 'No snippets yet'}
+                </h3>
+                <p className="text-muted-foreground mb-6">
+                  {searchTerm || languageFilter !== 'all' || showFavoritesOnly
+                    ? 'Try adjusting your search or filter criteria.' 
+                    : 'Start by adding your first code snippet or AI prompt.'}
+                </p>
+                {!searchTerm && languageFilter === 'all' && !showFavoritesOnly && (
+                  <Button
+                    onClick={() => setIsAddModalOpen(true)}
+                    className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-400 hover:to-purple-400 text-white"
+                  >
+                    <Plus className="h-4 w-4 mr-2" />
+                    Add Your First Snippet
+                  </Button>
+                )}
+>>>>>>> 3f405ad5be1c4f87915b3a52b7aba4e9289950ff
               </div>
             )}
           </div>
 
+<<<<<<< HEAD
+=======
+          {/* Add/Edit Snippet Modal */}
+>>>>>>> 3f405ad5be1c4f87915b3a52b7aba4e9289950ff
           <AddSnippetModal
             isOpen={isAddModalOpen}
             onClose={() => {
@@ -207,6 +356,7 @@ export default function SnippetsPage() {
       </div>
     </ThemeProvider>
   );
+<<<<<<< HEAD
 }
 
 // Reusable stats card
@@ -222,4 +372,6 @@ function StatCard({ label, value, icon }: { label: string; value: number; icon: 
       </div>
     </div>
   );
+=======
+>>>>>>> 3f405ad5be1c4f87915b3a52b7aba4e9289950ff
 }

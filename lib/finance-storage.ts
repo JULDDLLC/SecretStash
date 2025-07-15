@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { FinancialSnapshot, FinanceData, IncomeStream, ExpenseFlow, Account } from '../types/finance';
+=======
+import { FinanceData, IncomeStream, ExpenseFlow, Account } from '../types/finance';
+>>>>>>> 3f405ad5be1c4f87915b3a52b7aba4e9289950ff
 
 const FINANCE_STORAGE_KEY = 'secretstash_finance_data';
 
@@ -20,7 +24,11 @@ const getDefaultFinanceData = (): FinanceData => ({
       id: '2',
       name: 'SaaS Product Revenue',
       type: 'passive',
+<<<<<<< HEAD
       amount: 4200,
+=======
+      amount: 1200,
+>>>>>>> 3f405ad5be1c4f87915b3a52b7aba4e9289950ff
       frequency: 'monthly',
       status: 'active',
       tags: ['saas', 'passive', 'recurring'],

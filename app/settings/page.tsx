@@ -1,12 +1,22 @@
 'use client';
 
 import { useState } from 'react';
+<<<<<<< HEAD
 import { Settings, Palette, Shield, Download, Upload, Sparkles } from 'lucide-react';
 import { Button } from '../../components/ui/button';
 import { Input } from '../../components/ui/input';
 import { Label } from '../../components/ui/label';
 import { Navbar } from '../../components/navbar';
 import { ThemeProvider } from '../../contexts/theme-context'; // ✔️ This is the correct and working one
+=======
+import { Settings, Palette, User, Shield, Download, Upload, Sparkles } from 'lucide-react';
+import { Button } from '../../components/ui/button';
+import { Input } from '../../components/ui/input';
+import { Label } from '../../components/ui/label';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../components/ui/select';
+import { Navbar } from '../../components/navbar';
+import { ThemeProvider } from '../../contexts/theme-context';
+>>>>>>> 3f405ad5be1c4f87915b3a52b7aba4e9289950ff
 
 export default function SettingsPage() {
   const [vaultName, setVaultName] = useState('My SecretStash');
@@ -14,6 +24,7 @@ export default function SettingsPage() {
   const [selectedTheme, setSelectedTheme] = useState('cosmic-dark');
   const [selectedBackground, setSelectedBackground] = useState('nebula');
 
+<<<<<<< HEAD
   const handleExportSettings = () => {
     const settings = {
       vaultName,
@@ -34,6 +45,8 @@ export default function SettingsPage() {
     URL.revokeObjectURL(url);
   };
 
+=======
+>>>>>>> 3f405ad5be1c4f87915b3a52b7aba4e9289950ff
   const avatars = [
     { id: 'cosmic', name: 'Cosmic Guardian', emoji: '🌌' },
     { id: 'shield', name: 'Security Shield', emoji: '🛡️' },
@@ -59,6 +72,29 @@ export default function SettingsPage() {
     { id: 'minimal', name: 'Minimal', preview: 'Clean and simple' }
   ];
 
+<<<<<<< HEAD
+=======
+  const handleExportSettings = () => {
+    const settings = {
+      vaultName,
+      selectedAvatar,
+      selectedTheme,
+      selectedBackground,
+      exportDate: new Date().toISOString()
+    };
+    
+    const blob = new Blob([JSON.stringify(settings, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'secretstash-settings.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
+>>>>>>> 3f405ad5be1c4f87915b3a52b7aba4e9289950ff
   return (
     <ThemeProvider>
       <div className="min-h-screen bg-background">
@@ -66,17 +102,33 @@ export default function SettingsPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-white to-gray-50 light:opacity-100 opacity-0 transition-opacity duration-300" />
         <div className="relative z-10">
           <Navbar />
+<<<<<<< HEAD
           <div className="container mx-auto px-4 py-8 pt-24">
+=======
+          
+          <div className="container mx-auto px-4 py-8 pt-24">
+            {/* Header */}
+>>>>>>> 3f405ad5be1c4f87915b3a52b7aba4e9289950ff
             <div className="text-center mb-8">
               <div className="inline-flex p-3 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-4">
                 <Settings className="h-8 w-8 text-white" />
               </div>
               <h1 className="text-4xl font-bold text-foreground mb-2">Vault Settings</h1>
+<<<<<<< HEAD
               <p className="text-muted-foreground text-lg">Customize your SecretStash multiverse experience</p>
             </div>
 
             <div className="max-w-4xl mx-auto space-y-8">
               {/* Personalization */}
+=======
+              <p className="text-muted-foreground text-lg">
+                Customize your SecretStash multiverse experience
+              </p>
+            </div>
+
+            <div className="max-w-4xl mx-auto space-y-8">
+              {/* Personalization Section */}
+>>>>>>> 3f405ad5be1c4f87915b3a52b7aba4e9289950ff
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
                 <div className="flex items-center space-x-3 mb-6">
                   <div className="p-2 rounded-lg bg-gradient-to-r from-purple-500/20 to-pink-500/20">
@@ -86,6 +138,7 @@ export default function SettingsPage() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+<<<<<<< HEAD
                   <div>
                     <Label htmlFor="vaultName" className="text-white mb-2 block">Vault Name</Label>
                     <Input id="vaultName" value={vaultName} onChange={(e) => setVaultName(e.target.value)} className="bg-white/5 border-white/10 text-white" />
@@ -96,6 +149,38 @@ export default function SettingsPage() {
                     <div className="grid grid-cols-3 gap-2">
                       {avatars.map((avatar) => (
                         <button key={avatar.id} onClick={() => setSelectedAvatar(avatar.id)} className={`p-3 rounded-lg border transition-all duration-300 ${selectedAvatar === avatar.id ? 'border-cyan-500 bg-cyan-500/20' : 'border-white/10 bg-white/5 hover:border-white/20'}`}>
+=======
+                  {/* Vault Name */}
+                  <div>
+                    <Label htmlFor="vaultName" className="text-white mb-2 block">
+                      Vault Name
+                    </Label>
+                    <Input
+                      id="vaultName"
+                      value={vaultName}
+                      onChange={(e) => setVaultName(e.target.value)}
+                      className="bg-white/5 border-white/10 text-white"
+                      placeholder="My SecretStash"
+                    />
+                  </div>
+
+                  {/* Avatar Selection */}
+                  <div>
+                    <Label className="text-white mb-2 block">
+                      Multiverse Guide
+                    </Label>
+                    <div className="grid grid-cols-3 gap-2">
+                      {avatars.map((avatar) => (
+                        <button
+                          key={avatar.id}
+                          onClick={() => setSelectedAvatar(avatar.id)}
+                          className={`p-3 rounded-lg border transition-all duration-300 ${
+                            selectedAvatar === avatar.id
+                              ? 'border-cyan-500 bg-cyan-500/20'
+                              : 'border-white/10 bg-white/5 hover:border-white/20'
+                          }`}
+                        >
+>>>>>>> 3f405ad5be1c4f87915b3a52b7aba4e9289950ff
                           <div className="text-2xl mb-1">{avatar.emoji}</div>
                           <div className="text-xs text-gray-300">{avatar.name}</div>
                         </button>
@@ -115,11 +200,30 @@ export default function SettingsPage() {
                 </div>
 
                 <div className="space-y-6">
+<<<<<<< HEAD
                   <div>
                     <Label className="text-white mb-3 block">Color Theme</Label>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                       {themes.map((theme) => (
                         <button key={theme.id} onClick={() => setSelectedTheme(theme.id)} className={`p-4 rounded-lg border transition-all duration-300 ${selectedTheme === theme.id ? 'border-cyan-500 bg-cyan-500/20' : 'border-white/10 bg-white/5 hover:border-white/20'}`}>
+=======
+                  {/* Theme Selection */}
+                  <div>
+                    <Label className="text-white mb-3 block">
+                      Color Theme
+                    </Label>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                      {themes.map((theme) => (
+                        <button
+                          key={theme.id}
+                          onClick={() => setSelectedTheme(theme.id)}
+                          className={`p-4 rounded-lg border transition-all duration-300 ${
+                            selectedTheme === theme.id
+                              ? 'border-cyan-500 bg-cyan-500/20'
+                              : 'border-white/10 bg-white/5 hover:border-white/20'
+                          }`}
+                        >
+>>>>>>> 3f405ad5be1c4f87915b3a52b7aba4e9289950ff
                           <div className={`h-8 w-full rounded bg-gradient-to-r ${theme.preview} mb-2`} />
                           <div className="text-sm text-white">{theme.name}</div>
                         </button>
@@ -127,11 +231,30 @@ export default function SettingsPage() {
                     </div>
                   </div>
 
+<<<<<<< HEAD
                   <div>
                     <Label className="text-white mb-3 block">Universe Background</Label>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                       {backgrounds.map((bg) => (
                         <button key={bg.id} onClick={() => setSelectedBackground(bg.id)} className={`p-4 rounded-lg border text-left transition-all duration-300 ${selectedBackground === bg.id ? 'border-cyan-500 bg-cyan-500/20' : 'border-white/10 bg-white/5 hover:border-white/20'}`}>
+=======
+                  {/* Background Selection */}
+                  <div>
+                    <Label className="text-white mb-3 block">
+                      Universe Background
+                    </Label>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                      {backgrounds.map((bg) => (
+                        <button
+                          key={bg.id}
+                          onClick={() => setSelectedBackground(bg.id)}
+                          className={`p-4 rounded-lg border text-left transition-all duration-300 ${
+                            selectedBackground === bg.id
+                              ? 'border-cyan-500 bg-cyan-500/20'
+                              : 'border-white/10 bg-white/5 hover:border-white/20'
+                          }`}
+                        >
+>>>>>>> 3f405ad5be1c4f87915b3a52b7aba4e9289950ff
                           <div className="text-white font-medium">{bg.name}</div>
                           <div className="text-sm text-gray-400">{bg.preview}</div>
                         </button>
@@ -141,7 +264,11 @@ export default function SettingsPage() {
                 </div>
               </div>
 
+<<<<<<< HEAD
               {/* Backup */}
+=======
+              {/* Backup & Security */}
+>>>>>>> 3f405ad5be1c4f87915b3a52b7aba4e9289950ff
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
                 <div className="flex items-center space-x-3 mb-6">
                   <div className="p-2 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20">
@@ -151,17 +278,42 @@ export default function SettingsPage() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+<<<<<<< HEAD
                   <Button onClick={handleExportSettings} variant="outline" className="border-green-500/50 text-green-400 hover:bg-green-500/10">
                     <Download className="h-4 w-4 mr-2" /> Export Settings
                   </Button>
                   <Button variant="outline" className="border-blue-500/50 text-blue-400 hover:bg-blue-500/10">
                     <Upload className="h-4 w-4 mr-2" /> Import Settings
+=======
+                  <Button
+                    onClick={handleExportSettings}
+                    variant="outline"
+                    className="border-green-500/50 text-green-400 hover:bg-green-500/10"
+                  >
+                    <Download className="h-4 w-4 mr-2" />
+                    Export Settings
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="border-blue-500/50 text-blue-400 hover:bg-blue-500/10"
+                  >
+                    <Upload className="h-4 w-4 mr-2" />
+                    Import Settings
+>>>>>>> 3f405ad5be1c4f87915b3a52b7aba4e9289950ff
                   </Button>
                 </div>
               </div>
 
+<<<<<<< HEAD
               <div className="text-center">
                 <Button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-400 hover:to-purple-400 text-white px-8 py-3">
+=======
+              {/* Save Changes */}
+              <div className="text-center">
+                <Button
+                  className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-400 hover:to-purple-400 text-white px-8 py-3"
+                >
+>>>>>>> 3f405ad5be1c4f87915b3a52b7aba4e9289950ff
                   Save Changes
                 </Button>
               </div>

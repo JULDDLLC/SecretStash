@@ -17,16 +17,19 @@ export function TestimonialsTicker() {
     if (!ticker) return;
 
     let animationId: number;
-    let start = Date.now();
     let px = 0;
 
     function animate() {
-      // Slower speed (lower = slower, try 0.7 or adjust as needed)
-      const speed = 0.7;
+      // Make speed even slower and smooth (adjust as needed)
+      const speed = 0.4; // lower is slower
       px -= speed;
-      if (px < -ticker.scrollWidth / 2) {
+
+      // Infinite scroll: reset when scrolled past half (since we doubled list)
+      const resetPoint = -ticker.scrollWidth / 2;
+      if (px <= resetPoint) {
         px = 0;
       }
+
       ticker.style.transform = `translateX(${px}px)`;
       animationId = requestAnimationFrame(animate);
     }
@@ -46,6 +49,7 @@ export function TestimonialsTicker() {
           display: 'inline-flex',
         }}
       >
+        {/* Duplicate testimonials for infinite scroll */}
         {[...testimonials, ...testimonials].map((t, i) => (
           <span key={i}>{t}</span>
         ))}

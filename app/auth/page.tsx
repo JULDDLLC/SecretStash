@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { AuthForm } from '../../components/auth/auth-form';
 import { Navbar } from '../../components/navbar';
 import { ThemeProvider } from '../../contexts/theme-context';
@@ -9,7 +9,7 @@ export default function AuthPage() {
   const [mode, setMode] = useState<'signin' | 'signup'>('signin');
 
   const toggleMode = () => {
-    setMode(prev => (prev === 'signin' ? 'signup' : 'signin'));
+    setMode(prev => prev === 'signin' ? 'signup' : 'signin');
   };
 
   return (
