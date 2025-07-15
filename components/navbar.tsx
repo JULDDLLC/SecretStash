@@ -3,10 +3,10 @@
 import { useEffect, useState } from 'react';
 import { useTheme } from '../contexts/theme-context'; // 👈 this is the correct hook now
 import { Shield, Sun, Moon, LogOut, Settings, Calculator, Code, User } from 'lucide-react';
-import { Button } from '../ui/button';
+import { Button } from '@/components/ui/button';
 import { SubscriptionStatus } from './subscription/subscription-status';
 import { usePathname, useRouter } from 'next/navigation';
-import { AuthUser } from '../../lib/auth';
+import { AuthUser } from '../lib/auth';
 
 export const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
