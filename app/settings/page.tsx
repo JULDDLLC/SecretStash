@@ -44,7 +44,7 @@ export default function SettingsPage() {
       fileReader.readAsText(e.target.files[0]);
     }
   };
-
+  
   return (
     <div className="min-h-screen bg-background text-foreground px-4 py-12">
       <div className="max-w-2xl mx-auto space-y-8">
