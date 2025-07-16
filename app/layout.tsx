@@ -1,4 +1,4 @@
-import './globals.css';
+import '../globals.css';//instead of './globals.css
 import type { Metadata } from 'next';
 import { Manrope } from 'next/font/google';
 import { ThemeProvider } from '@/contexts/theme-context';

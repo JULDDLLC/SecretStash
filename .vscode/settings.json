@@ -1,4 +1,5 @@
-"tailwindCSS.experimental.classRegex": [
+{
+    "tailwindCSS.experimental.classRegex":[
   ["tw`([^`]*)", 1],
   ["tw=\"([^\"]*)", 1],
   ["tw={\"([^\"]*)", 1],
@@ -7,4 +8,5 @@
 ],
 "editor.quickSuggestions": {
   "strings": true
+}
 }
