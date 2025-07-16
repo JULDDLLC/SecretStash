@@ -1,4 +1,4 @@
-'use client';
+// Forcing an update for Vercel'use client';
 
 import { useEffect, useState } from 'react';
 import { useTheme } from '../contexts/theme-context'; // 👈 this is the correct hook now
