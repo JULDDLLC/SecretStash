@@ -1,29 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  :root {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 5.5%;
-    --card-foreground: 210 40% 98%;
-    --primary: 263 84% 70%;
-    --primary-foreground: 220 20% 20%;
-    --secondary: 222.2 84% 10%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 222.2 84% 8%;
-    --muted-foreground: 210 40% 70%;
-    --border: 240 20% 15%;
-    --input: 240 20% 25%;
-    --ring: 263 80% 70%;
-    --radius: 0.5rem;
-    --font-manrope: 'Manrope', sans-serif;
-
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
-  }
+@import "tailwindcss";
 
   html.light {
     --background: 0 0% 100%;
@@ -85,7 +60,6 @@
   p {
     line-height: 1.8;
   }
-}
 
 /* Custom Cursor */
 .cursor-glow {
