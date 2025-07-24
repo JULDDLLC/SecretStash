@@ -270,4 +270,4 @@ export default function SnippetsPage() {
       </div>
     </ThemeProvider>
   );
-}
+}}
