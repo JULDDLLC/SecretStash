@@ -55,9 +55,6 @@ export default function SnippetsPage() {
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString()
     };
-<<<<<<< HEAD
-
-=======
     
     addSnippet(newSnippet);
     setSnippets(prev => [...prev, newSnippet]);
@@ -75,9 +72,6 @@ export default function SnippetsPage() {
         ...snippetData,
         updatedAt: new Date().toISOString()
       };
-<<<<<<< HEAD
-
-=======
       
       updateSnippet(editingSnippet.id, updatedSnippet);
       setSnippets(prev => prev.map(s => s.id === editingSnippet.id ? updatedSnippet : s));
