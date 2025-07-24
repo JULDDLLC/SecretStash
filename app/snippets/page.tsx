@@ -86,7 +86,7 @@ export default function SnippetsPage() {
 
   const handleToggleFavorite = (id: string) => {
     toggleSnippetFavorite(id);
-    setSnippets(prev => prev.map(s => 
+    setSnippets(prev => prev.map(s =>
       s.id === id ? { ...s, isFavorite: !s.isFavorite, updatedAt: new Date().toISOString() } : s
     ));
   };
