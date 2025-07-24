@@ -28,16 +28,12 @@ import {
 import { calculateAndSaveSnapshot } from '../../lib/finance-storage';
 
 export default function FinancePage() {
-<<<<<<< HEAD
  const [data, setData] = useState<FinanceData>({
   incomeStreams: [],
   expenseFlows: [],
   accounts: [],
   historicalData: [],
 });
-=======
-  const [data, setData] = useState<FinanceData>({ incomeStreams: [], expenseFlows: [], accounts: [] });
->>>>>>> 3f405ad5be1c4f87915b3a52b7aba4e9289950ff
   const [isIncomeModalOpen, setIsIncomeModalOpen] = useState(false);
   const [isExpenseModalOpen, setIsExpenseModalOpen] = useState(false);
   const [isAccountModalOpen, setIsAccountModalOpen] = useState(false);
